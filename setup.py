@@ -10,7 +10,7 @@ from distutils.core import setup
 import textwrap
 
 DESCRIPTION = """
-ll-aplora is script that can be used with Apache piped logging facility to
+ll-aplora is script that can be used with Apaches piped logging facility to
 log request to an Oracle database.
 """
 

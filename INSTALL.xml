@@ -15,13 +15,14 @@ Execute the following command:</par>
 <prog>
 python setup.py install
 </prog>
+
 <par>This will copy aplora.py to <dirname>/usr/local/bin</dirname>. If you
 want to install the script somewhere else you can use the
 <option>--install-scripts</option> option.</par>
 
 <par>There is no Windows binary.</par>
 
-<par>To create the database table and the stored procedure use <filename>aplora.sql</filename>.
+<par>To create the database table and the stored procedure use <filename>aplora.sql</filename>.</par>
 
 <par>If you have difficulties installing this software, send a problem report
 to Walter Dörwald (<email>walter@livinglogic.de</email>).</par>
