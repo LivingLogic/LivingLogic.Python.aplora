@@ -4,7 +4,7 @@
 <olist>
 <item><link href="http://www.python.org/">Python</link> (any version supported by cx_Oracle should do);</item>
 <item><link href="http://httpd.apache.org/">Apache</link> (2.0.46 or later, although it's possible to get it to work with Apache 1.3 by removing a few of the logging parameters);</item>
-<item><link href="http://www.computronix.com/utilities.shtml#Oracle">cx_Oracle</link> (4.0 or later)</item>
+<item><link href="http://www.computronix.com/utilities.shtml#Oracle">cx_Oracle</link> (4.0 or later).</item>
 </olist>
 </section>
 
