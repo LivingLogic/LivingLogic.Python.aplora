@@ -35,26 +35,20 @@ to Walter Dörwald (<email>walter@livinglogic.de</email>).</par>
 the following two lines into your <filename>httpd.conf</filename>:</par>
 
 <prog>
-LogFormat "%{APLORA_SITE}e\t%{%s}t\t%D\t%a\t%{User-Agent}i\t%U\t%q\t%m\t%>s\t0\t0\t%B\t%{Referer}i\t%{Content-Type}o\t%{JSESSIONID}C\t%{Set-Cookie}o" aplora
-SetEnv APLORA_SITE default
-</prog>
-
-<par>Then for each configured location that you wish to log as a
-seperate site (e.g. each virtual server), put something like the
-following into each <lit>&lt;Location&gt;</lit> or
-<lit>&lt;Directory&gt;</lit> or virtual server configuration:</par>
-
-<prog>
-SetEnv APLORA_SITE <rep>sitename</rep>
+LogFormat "%v\t%{%s}t\t%D\t%a\t%{User-Agent}i\t%U\t%q\t%m\t%>s\t0\t0\t%B\t%{Referer}i\t%{Content-Type}o\t%{JSESSIONID}C\t%{Set-Cookie}o" aplora
 CustomLog "|/usr/local/bin/aplora.py -o <rep>ORACLE_HOME</rep> -c <rep>user/pass@db</rep> -p log_insert" aplora
 </prog>
 
-<par>Replace <lit><rep>sitename</rep></lit> with the name of the site
-(which will be put into the field <lit>LOG_SITE</lit>,
-<lit><rep>ORACLE_HOME</rep></lit> with the content of your
+<par>Replace <lit><rep>ORACLE_HOME</rep></lit> with the content of your
 <lit>ORACLE_HOME</lit> environment variable (e.g. <lit>/oracle/Client</lit>)
-and <lit><rep>user/pass@db</rep></lit> with the connect string appropriate.
+and <lit><rep>user/pass@db</rep></lit> with the appropriate connect string.
 The option <option>-p</option> can be used to specify a different insert
 procedure.</par>
+
+<par>Note that this will only work for virtual hosts, if they don't have
+a <lit>CustomLog</lit> or <lit>ErrorLog</lit> directive. In case case you
+have to add the <lit>CustomLog</lit> specification for above to each
+virtual host section. This means that you will have more aplora jobs
+running and more datebase connection will be consumed.</par>
 
 </section>

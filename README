@@ -1,4 +1,4 @@
-ll-aplora 0.1
+ll-aplora 0.2
 
 ll-aplora is script that can be used with Apache piped logging facility to
 log request to an Oracle database.
