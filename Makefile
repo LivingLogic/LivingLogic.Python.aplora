@@ -19,5 +19,4 @@ dist:
 	python$(PYVERSION) `which doc2txt.py` --title "History" NEWS.xml NEWS
 	python$(PYVERSION) `which doc2txt.py` --title "Requirements, installation and configuration" INSTALL.xml INSTALL
 	python$(PYVERSION) setup.py sdist --formats=bztar,gztar
-	python$(PYVERSION) setup.py bdist --formats=rpm
 	rm NEWS INSTALL
