@@ -28,6 +28,7 @@ KEYWORDS = """
 Apache
 logging
 Oracle
+database
 piped logging
 request
 HTTP
