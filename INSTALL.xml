@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<section><title>Requirements</title>
+<par>To use this script you need the following software packages:</par>
+<olist>
+<item><link href="http://www.python.org/">Python</link> (any version supported by cx_Oracle should do);</item>
+<item><link href="http://httpd.apache.org/">Apache</link> (2.0.46 or later, although it's possible to get it to work with Apache 1.3 by removing a few of the logging parameters);</item>
+<item><link href="http://www.computronix.com/utilities.shtml#Oracle">cx_Oracle</link> (4.0 or later)</item>
+</olist>
+</section>
+
+
+<section><title>Installation</title>
+<par><app>distutils</app> is used for installation, so it's rather simple.
+Execute the following command:</par>
+<prog>
+python setup.py install
+</prog>
+<par>This will copy aplora.py to <dirname>/usr/local/bin</dirname>. If you
+want to install the script somewhere else you can use the
+<option>--install-scripts</option> option.</par>
+
+<par>There is no Windows binary.</par>
+
+<par>To create the database table and the stored procedure use <filename>aplora.sql</filename>.
+
+<par>If you have difficulties installing this software, send a problem report
+to Walter Dörwald (<email>walter@livinglogic.de</email>).</par>
+
+</section>
+
+
+<section><title>Configuration</title>
+<par>First you have to define the logging format to be used by aplora. Put
+the following two lines into your <filename>httpd.conf</filename>:</par>
+
+<prog>
+LogFormat "%{APLORA_SITE}e\t%{%s}t\t%D\t%a\t%{User-Agent}i\t%U\t%q\t%m\t%>s\t0\t0\t%B\t%{Referer}i\t%{Content-Type}o\t%{JSESSIONID}C\t%{Set-Cookie}o" aplora
+SetEnv APLORA_SITE default
+</prog>
+
+<par>Then for each configured location that you wish to log as a
+seperate site (e.g. each virtual server), put something like the
+following into each <lit>&lt;Location&gt;</lit> or
+<lit>&lt;Directory&gt;</lit> or virtual server configuration:</par>
+
+<prog>
+SetEnv APLORA_SITE <rep>sitename</rep>
+CustomLog "|/usr/local/bin/aplora.py -o <rep>ORACLE_HOME</rep> -c <rep>user/pass@db</rep> -p log_insert" aplora
+</prog>
+
+<par>Replace <code><rep>sitename</rep></code> with the name of the site
+(which will be put into the field <lit>LOG_SITE</lit>,
+<code><rep>ORACLE_HOME</rep></code> with the content of your
+<lit>ORACLE_HOME</lit> environment variable (e.g. <lit>/oracle/Client</lit>)
+and <code><lit>user/pass@db</lit></code> with the connect string appropriate.
+The option <option>-p</option> can be used to specify a different insert
+procedure.</par>
+
+</section>
