@@ -49,11 +49,11 @@ SetEnv APLORA_SITE <rep>sitename</rep>
 CustomLog "|/usr/local/bin/aplora.py -o <rep>ORACLE_HOME</rep> -c <rep>user/pass@db</rep> -p log_insert" aplora
 </prog>
 
-<par>Replace <code><rep>sitename</rep></code> with the name of the site
+<par>Replace <lit><rep>sitename</rep></lit> with the name of the site
 (which will be put into the field <lit>LOG_SITE</lit>,
-<code><rep>ORACLE_HOME</rep></code> with the content of your
+<lit><rep>ORACLE_HOME</rep></lit> with the content of your
 <lit>ORACLE_HOME</lit> environment variable (e.g. <lit>/oracle/Client</lit>)
-and <code><lit>user/pass@db</lit></code> with the connect string appropriate.
+and <lit><rep>user/pass@db</rep></lit> with the connect string appropriate.
 The option <option>-p</option> can be used to specify a different insert
 procedure.</par>
 
