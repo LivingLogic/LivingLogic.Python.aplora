@@ -49,6 +49,6 @@ procedure.</par>
 a <lit>CustomLog</lit> or <lit>ErrorLog</lit> directive. In this case you
 have to add the <lit>CustomLog</lit> specification from above to each
 virtual host section. This means that you will have more aplora jobs
-running and more database connection will be consumed.</par>
+running and more database connections will be consumed.</par>
 
 </section>
