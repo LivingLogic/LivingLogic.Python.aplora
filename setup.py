@@ -3,11 +3,10 @@
 
 # Setup script for aplora
 
-__version__ = "$Revision$"[11:-2]
-# $Source$
 
 from distutils.core import setup
 import textwrap
+
 
 DESCRIPTION = """
 ll-aplora is script that can be used with Apaches piped logging facility to
@@ -35,6 +34,7 @@ HTTP
 """
 
 DESCRIPTION = "\n".join(textwrap.wrap(DESCRIPTION.strip(), width=64, replace_whitespace=True))
+
 
 setup(
 	name="ll-aplora",
