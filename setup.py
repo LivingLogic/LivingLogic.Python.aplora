@@ -41,7 +41,7 @@ setup(
 	version="0.2",
 	description="Logging Apache requests to an Oracle database",
 	long_description=DESCRIPTION,
-	author=u"Walter Dörwald",
+	author=u"Walter Doerwald",
 	author_email="walter@livinglogic.de",
 	url="http://www.livinglogic.de/Python/aplora/",
 	download_url="http://www.livinglogic.de/Python/aplora/Download.html",
