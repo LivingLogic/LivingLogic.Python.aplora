@@ -1,22 +1,22 @@
-<section><title>Changes in 0.3 (released 01/07/2008)</title>
-<ulist>
-<item>Use <class>datetime.datetime</class> directly instead of going through
+<section><h>Changes in 0.3 (released 01/07/2008)</h>
+<ul>
+<li>Use <class>datetime.datetime</class> directly instead of going through
 <class>cx_Oracle.Timestamp</class> (this requires a modern version of
-<mod>cx_Oracle</mod>.</item>
-</ulist>
+<mod>cx_Oracle</mod>.</li>
+</ul>
 </section>
 
 
-<section><title>Changes in 0.2 (released 04/04/2005)</title>
-<ulist>
-<item>Instead of using an environment variable to pass the site name
-to <filename>aplora.py</filename> use the Apache directive <lit>%v</lit> now.</item>
-</ulist>
+<section><h>Changes in 0.2 (released 04/04/2005)</h>
+<ul>
+<li>Instead of using an environment variable to pass the site name
+to <filename>aplora.py</filename> use the Apache directive <lit>%v</lit> now.</li>
+</ul>
 </section>
 
 
-<section><title>Changes in 0.1 (released 01/18/2005)</title>
-<ulist>
-<item>Initial release</item>
-</ulist>
+<section><h>Changes in 0.1 (released 01/18/2005)</h>
+<ul>
+<li>Initial release</li>
+</ul>
 </section>
