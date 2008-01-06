@@ -1,3 +1,12 @@
+<section><title>Changes in 0.3 (released 01/07/2008)</title>
+<ulist>
+<item>Use <class>datetime.datetime</class> directly instead of going through
+<class>cx_Oracle.Timestamp</class> (this requires a modern version of
+<mod>cx_Oracle</mod>.</item>
+</ulist>
+</section>
+
+
 <section><title>Changes in 0.2 (released 04/04/2005)</title>
 <ulist>
 <item>Instead of using an environment variable to pass the site name

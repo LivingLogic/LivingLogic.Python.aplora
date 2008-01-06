@@ -1,8 +1,8 @@
-#!/usr/local/bin/python2.3
-# -*- coding: iso-8859-1 -*-
+#!/usr/local/bin/python
+# -*- coding: utf-8 -*-
 
-## Copyright 2004/2005 by LivingLogic AG, Bayreuth/Germany.
-## Copyright 2004/2005 by Walter Dörwald
+## Copyright 2004-2008 by LivingLogic AG, Bayreuth/Germany.
+## Copyright 2004-2008 by Walter DÃ¶rwald
 ##
 ## All Rights Reserved
 ##
@@ -25,7 +25,7 @@ This script can be used with Apache's piped logging to log HTTP request
 to an Oracle database.
 """
 
-__version__ = "$Revision$"[11:-1]
+__docformat__ = "plaintext"
 
 
 import os, datetime, cgi, Cookie, urlparse
@@ -98,12 +98,10 @@ class Logger(object):
 			contenttype = field.next()
 			sessionin = field.next()
 			sessionout = field.next()
-	
-			reqstart = self.cx_Oracle.Timestamp(reqstart.year, reqstart.month, reqstart.day, reqstart.hour, reqstart.minute, reqstart.second)
-	
+
 			(mimetype, options) = cgi.parse_header(contenttype)
 			charset = options.get("charset", None)
-	
+
 			data = [
 				reqstart,
 				reqtime,

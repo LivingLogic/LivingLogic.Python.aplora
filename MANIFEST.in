@@ -1,6 +1,6 @@
-include README
-include NEWS
+include README.rst
+include NEWS.rst
 include NEWS.xml
-include INSTALL
+include INSTALL.rst
 include INSTALL.xml
 include aplora.sql

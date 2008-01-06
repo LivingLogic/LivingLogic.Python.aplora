@@ -38,7 +38,7 @@ DESCRIPTION = "\n".join(textwrap.wrap(DESCRIPTION.strip(), width=64, replace_whi
 
 setup(
 	name="ll-aplora",
-	version="0.2",
+	version="0.3",
 	description="Logging Apache requests to an Oracle database",
 	long_description=DESCRIPTION,
 	author=u"Walter Doerwald",
