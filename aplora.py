@@ -25,7 +25,7 @@ This script can be used with Apache's piped logging to log HTTP request
 to an Oracle database.
 """
 
-__docformat__ = "plaintext"
+__docformat__ = "reStructuredText"
 
 
 import os, datetime, cgi, Cookie, urlparse
