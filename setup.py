@@ -49,5 +49,5 @@ setup(
 	classifiers=CLASSIFIERS.strip().splitlines(),
 	keywords=",".join(KEYWORDS.strip().splitlines()),
 	scripts=["aplora.py" ],
-	package_data={'': ["/aplora.sql"]}
+	package_data={'': ["aplora.sql"]}
 )
