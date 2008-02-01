@@ -22,7 +22,7 @@ command::
 	$ python setup.py install
 
 This will copy aplora.py to ``/usr/local/bin``. If you want to install the
-script somewhere else you can use the :optione:`--install-scripts` option.
+script somewhere else you can use the :option:`--install-scripts` option.
 
 There is no Windows binary.
 
