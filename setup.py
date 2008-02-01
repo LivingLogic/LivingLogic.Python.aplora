@@ -44,7 +44,7 @@ setup(
 	author=u"Walter Doerwald",
 	author_email="walter@livinglogic.de",
 	url="http://www.livinglogic.de/Python/aplora/",
-	download_url="http://www.livinglogic.de/Python/aplora/Download.html",
+	download_url="http://www.livinglogic.de/Python/Download.html@aplora",
 	license="Python",
 	classifiers=CLASSIFIERS.strip().splitlines(),
 	keywords=",".join(KEYWORDS.strip().splitlines()),
